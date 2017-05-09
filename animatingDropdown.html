@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      dropdown Classy Ones
+    </title>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"> 
+    <style >
+      nav {
+        padding: 5px;
+        text-align: center;
+        font-family: 'Lobster', cursive;
+      }
+
+
+
+
+      /* Represented by ">" The child selector selects all elements that are the immediate children of a specified element.
+
+      The following example selects all <ul> elements that are immediate children of a <nav> element: 
+
+      So remember that the selected elements is ul not nav but only the ul's which are immediate child of 
+
+      to read other different selector read from w3 schools about CSS combinators!!
+
+
+      */
+
+      nav > ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+
+      }
+      nav > ul > li {
+        float: left;
+        width: 150px;
+        height: 65px;
+        line-height: 65px;
+        position: relative;
+        text-transform: uppercase;
+        font-size: 40px;
+        border-top: 5px black solid;
+        border-bottom: 5px black solid;
+        background: white;
+        color: black;
+        cursor: pointer;
+        transition: all 1s ;
+      }
+      nav > ul > li:hover {
+        background: black;
+        color: white;
+
+
+      }
+
+      ul.drop-menu {
+        position: absolute;
+        top: 107%;
+        left: 0;
+        width: 150px;
+        padding: 0;
+        transition: all 500ms ;
+      }
+
+      /*
+      Represented by just a " "(space) The descendant selector matches all elements that are descendants of a specified element.
+
+      The following selects all li elements inside drop-menu class elements:
+      */
+      ul.drop-menu li {
+        background: grey;
+        color: white;
+        transform-origin: top;
+        box-shadow:0 0 10px 1px rgba(0,0,0,1); 
+      
+        
+      }
+     ul.ousside ul.drop-menu li:hover {
+
+        background: white;
+        color: black;
+        transform: scale(1.3);
+        perspective: 2px;
+
+
+      }
+      ul.drop-menu li:last-child {
+        border-radius: 0px 0px 5px 5px;
+      }
+
+      ul.drop-menu li {
+        display: none;
+
+
+      }
+
+      li:hover > ul.drop-menu li {
+        display: block;
+
+
+      }
+      .animateMe{
+
+        animation: anime 10s ease-in-out  ;
+
+      }
+      @keyframes anime1{
+        0% {
+          transform: scale(0.01); 
+        }
+
+        60%{ transform: scale(1.5); }
+        100%{};
+
+
+      }
+      @keyframes anime2{
+        0% { transform: rotateX(+90deg); }
+        50% {transform: rotateX(-45deg);}
+        75% {transform: rotateX(+22deg);}
+        100% {transform: rotateX(0);}
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <nav>
+      <ul class="ousside">
+        <li>style 1
+          <ul class="drop-menu menu-1">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E </li>
+
+          </ul>
+        </li>
+
+        <li>Style2
+          <ul class="drop-menu menu-2">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script >
+      var $listEl = $("ul.menu-1 li");
+      console.log($listEl);
+      var $listEl1 = $("ul.menu-2 li");
+
+      for(var i= 0; i<= $listEl.length; i++){
+        var el = $listEl[i];
+        var $currEl = $(el);
+
+        $currEl.css("animation-name","anime1");
+        $currEl.css("animation-duration", "500ms");
+        $currEl.css("animation-delay", i + "00ms");
+        $currEl.css("animation-fill-mode","backwards");
+
+      }
+      for(var i= 0; i<= $listEl1.length; i++){
+        var el = $listEl1[i];
+        var $currEl = $(el);
+
+        $currEl.css("animation-name","anime2");
+        $currEl.css("animation-duration", "500ms");
+        $currEl.css("animation-delay", i*3 + "00ms");
+        $currEl.css("animation-fill-mode","backwards");
+        $currEl.css("animation-timing-function","ease-out");
+      }
+      //the animation  that i apply here actually only triggers when the display changes from none to block;
+      // and once i hover away, the display goes block again and next time you hover it restarts the animation
+
+
+    </script>
+  </body>
+</html>
