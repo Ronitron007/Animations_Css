@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <style >
+    body
+        {
+          background-color: black;
+        }
+
+
+      .container { 
+  width: 800px;
+  height: 1000px;
+  border: 2px solid orangered;
+  display: inline-block;
+  perspective: 2000px;
+  transform: scale(0.5);
+}
+ .face{
+    width: 800px;
+    height: 1000px;
+    transform-style: preserve-3d; 
+   display: flex;
+    flex-wrap: wrap;
+   transform: scale(0.5);
+   animation: haha 1s linear both;
+ }
+ @keyframes haha {
+  0%{transform: rotateY(0) rotateX(0) translateZ(0); }
+ 
+  50%{transform: rotateX(180deg);}
+  100%{transform: rotateX(0);};
+ }
+ @keyframes F {
+  0%{ transform: rotateX(0); }
+
+ 10%{transform: rotateX(180deg);}
+ 20%{transform: rotateX(360deg)}
+  30%{transform: rotateX(180deg);}
+ 40%{transform: rotateX(360deg)}
+  50%{transform: rotateX(180deg);}
+ 60%{transform: rotateX(360deg)}
+  70%{transform: rotateX(180deg);}
+ 80%{transform: rotateX(360deg);}
+  90%{transform: rotateX(180deg);}
+ 1000%{transform: rotateX(360deg);
+ };
+ }
+
+
+.cube {
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  
+}
+.animate{
+  animation: F 1s linear both infinite; 
+}
+
+
+.cube figure {
+  margin: 0;
+  width: 196px;
+  height: 196px;
+  display: block;
+  position: absolute;
+  border: 2px solid black;
+  border-radius: 5%;
+  box-shadow:0 0 10px 1px rgba(0,0,0,1); 
+}
+
+.cube .front  { transform: rotateY(   0deg ) translateZ( 100px ); background-color: blue; }
+.cube .back   { transform: rotateX( 180deg ) translateZ( 100px ); background-color: green;}
+.cube .right  { transform: rotateY(  90deg ) translateZ( 100px ); background-color: red; }
+.cube .left   { transform: rotateY( -90deg ) translateZ( 100px );  background-color: yellow;}
+.cube .top    { transform: rotateX(  90deg ) translateZ( 100px ); background-color: orange;}
+.cube .bottom { transform: rotateX( -90deg ) translateZ( 100px ); background-color: white;}
+       
+       h1{
+        position: absolute;
+        color: white;
+        font-size: 50px;
+       }
+       section{
+        position: absolute;
+        top: -80px;
+       }
+    </style>
+  </head>
+  <body>
+  <h1>TYPE ANYTHING YOU WANT.....</h1>
+    <section class="container">
+    <div class="face" id="loki">
+    <div class="cube">
+      <figure class="front">1</figure>
+      <figure class="back">2</figure>
+      <figure class="right">3</figure>
+      <figure class="left">4</figure>
+      <figure class="top">5</figure>
+      <figure class="bottom">6</figure>
+    </div>
+     <div class="cube" >
+      <figure class="front">1</figure>
+      <figure class="back">2</figure>
+      <figure class="right">3</figure>
+      <figure class="left">4</figure>
+      <figure class="top">5</figure>
+      <figure class="bottom">6</figure>
+    </div>
+    <div class="cube" >
+      <figure class="front">1</figure>
+      <figure class="back">2</figure>
+      <figure class="right">3</figure>
+      <figure class="left">4</figure>
+      <figure class="top">5</figure>
+      <figure class="bottom">6</figure>
+    </div>
+
+
+    <div class="cube">
+    <figure class="front">1</figure>
+    <figure class="back">2</figure>
+    <figure class="right">3</figure>
+    <figure class="left">4</figure>
+    <figure class="top">5</figure>
+    <figure class="bottom">6</figure>
+    </div>
+    <div class="cube">
+    <figure class="front">1</figure>
+    <figure class="back">2</figure>
+    <figure class="right">3</figure>
+    <figure class="left">4</figure>
+    <figure class="top">5</figure>
+    <figure class="bottom">6</figure>
+    </div>
+    <div class="cube">
+      <figure class="front">1</figure>
+      <figure class="back">2</figure>
+      <figure class="right">3</figure>
+      <figure class="left">4</figure>
+      <figure class="top">5</figure>
+      <figure class="bottom">6</figure>
+    </div>
+    <div class="cube">
+      <figure class="front">1</figure>
+      <figure class="back">2</figure>
+      <figure class="right">3</figure>
+      <figure class="left">4</figure>
+      <figure class="top">5</figure>
+      <figure class="bottom">6</figure>
+    </div>
+     <div class="cube">
+    <figure class="front">1</figure>
+    <figure class="back">2</figure>
+    <figure class="right">3</figure>
+    <figure class="left">4</figure>
+    <figure class="top">5</figure>
+    <figure class="bottom">6</figure>
+    </div>
+    <div class="cube">
+    <figure class="front">1</figure>
+    <figure class="back">2</figure>
+    <figure class="right">3</figure>
+    <figure class="left">4</figure>
+    <figure class="top">5</figure>
+    <figure class="bottom">6</figure>
+    </div>
+    <div class="cube">
+      <figure class="front">1</figure>
+      <figure class="back">2</figure>
+      <figure class="right">3</figure>
+      <figure class="left">4</figure>
+      <figure class="top">5</figure>
+      <figure class="bottom">6</figure>
+    </div>
+    <div class="cube">
+      <figure class="front">1</figure>
+      <figure class="back">2</figure>
+      <figure class="right">3</figure>
+      <figure class="left">4</figure>
+      <figure class="top">5</figure>
+      <figure class="bottom">6</figure>
+    </div>
+
+<div class="cube">
+      <figure class="front">1</figure>
+      <figure class="back">2</figure>
+      <figure class="right">3</figure>
+      <figure class="left">4</figure>
+      <figure class="top">5</figure>
+      <figure class="bottom">6</figure>
+    </div>
+
+<div class="cube">
+      <figure class="front">1</figure>
+      <figure class="back">2</figure>
+      <figure class="right">3</figure>
+      <figure class="left">4</figure>
+      <figure class="top">5</figure>
+      <figure class="bottom">6</figure>
+    </div>
+
+<div class="cube">
+      <figure class="front">1</figure>
+      <figure class="back">2</figure>
+      <figure class="right">3</figure>
+      <figure class="left">4</figure>
+      <figure class="top">5</figure>
+      <figure class="bottom">6</figure>
+    </div>
+
+<div class="cube">
+      <figure class="front">1</figure>
+      <figure class="back">2</figure>
+      <figure class="right">3</figure>
+      <figure class="left">4</figure>
+      <figure class="top">5</figure>
+      <figure class="bottom">6</figure>
+    </div>
+
+<div class="cube">
+      <figure class="front">1</figure>
+      <figure class="back">2</figure>
+      <figure class="right">3</figure>
+      <figure class="left">4</figure>
+      <figure class="top">5</figure>
+      <figure class="bottom">6</figure>
+    </div>
+
+<div class="cube">
+      <figure class="front">1</figure>
+      <figure class="back">2</figure>
+      <figure class="right">3</figure>
+      <figure class="left">4</figure>
+      <figure class="top">5</figure>
+      <figure class="bottom">6</figure>
+    </div>
+
+<div class="cube">
+      <figure class="front">1</figure>
+      <figure class="back">2</figure>
+      <figure class="right">3</figure>
+      <figure class="left">4</figure>
+      <figure class="top">5</figure>
+      <figure class="bottom">6</figure>
+    </div>
+
+<div class="cube">
+      <figure class="front">1</figure>
+      <figure class="back">2</figure>
+      <figure class="right">3</figure>
+      <figure class="left">4</figure>
+      <figure class="top">5</figure>
+      <figure class="bottom">6</figure>
+    </div>
+
+  
+   <div  class="cube">
+    <figure class="front">1</figure>
+    <figure class="back">2</figure>
+    <figure class="right">3</figure>
+    <figure class="left">4</figure>
+    <figure class="top">5</figure>
+    <figure class="bottom">6</figure>
+  </div>
+  </div>
+
+</section>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+     <script >
+     var $x = $(".cube");
+     var letterA = [0,1,2,3,4,7,8,9,10,11,12,15,16,19];
+     var letterB = [0,1,2,3,4,7,8,9,10,11,12,15,16,17,18,19];
+     var letterC = ['0','1','2','3','4','8','12','16','17','18','19'];
+     var letterD = [0,1,2,4,8,12,16,7,11,15,17,18];
+     var letterE = [0,1,2,3,4,8,9,10,11,12,16,17,18,19];
+     var letterF = ['0','1','2','3','4',,'8','9','10','12','16'];
+     var letterG = [0,1,2,3,4,8,10,11,12,15,16,17,18,19];
+     var letterH = [0,3,4,7,8,9,10,11,12,15,16,19];
+     var letterI = [0,1,2,3,5,6,9,10,13,14,16,17,18,19];
+     var letterJ = [0,1,2,3,6,10,14,12,16,17,18];
+     var letterK = ['0','3','4','6','8','9','12','14','16','19'];
+     var letterL = [0,4,8,12,16,17,18,19];
+     var letterM = [0,1,2,3,4,5,6,7,8,11,12,15,16,19];
+     var letterN = [0,4,8,12,16,3,7,11,15,19,1,5,14,18,9,10];
+     var letterO = [0,1,2,3,4,8,12,16,7,11,15,17,18,19];
+     var letterP = [0,1,2,3,4,7,8,9,10,11,12,16];
+     var letterQ = [0,1,2,3,4,8,12,16,7,11,14,15,17,18,19];
+     var letterR = [0,1,2,3,4,7,8,9,10,11,12,16,14,19];
+     var letterS =  [0,1,2,3,4,8,9,10,11,15,16,17,18,19];
+     var letterT = [0,1,2,3,4,5,6,7,9,10,13,14,17,18];
+     var letterU = ['0','3','4','7','8','11','12','15','16','17','18','19'];
+     var letterV = ['0','3','4','7','8','11','12','15','17','18'];
+     
+     
+     
+     var space = ['9','10','11','8'];
+
+
+
+     var alphabets = [letterA,letterB,letterC,letterD,letterE,letterF,letterG,letterH,letterI,letterJ,letterK,letterL,letterM,letterN,letterO,letterP,letterQ,letterR,letterS,letterT,letterU,letterV, space];
+     
+     
+
+     var y = function(event){
+          var keyA = event.keyCode;
+
+        for(var j=0 ; j<=20; j++){
+          if (keyA< 92 && keyA > 64){
+        var temp = $x[alphabets[keyA-65][j]];
+      }
+      else if (keyA =32){
+         var temp = $x[alphabets[22][j]];
+      };
+        var $temp = $(temp);
+        $temp.addClass("animate");
+        };
+      
+          
+    } ;
+     var q = function(){
+           var keyA = event.keyCode; 
+        for(var j=0 ; j<=20; j++){
+         if (keyA< 92 && keyA > 64){
+        var temp = $x[alphabets[keyA-65][j]];
+      }
+      else if (keyA =32){
+         var temp = $x[alphabets[22][j]];
+      };
+        var $temp = $(temp);
+        $temp.removeClass("animate");
+        };
+        
+        }  
+
+       
+      
+       var Start = document.getElementsByClassName("face")[0];
+      
+       window.addEventListener("keydown",y);
+       window.addEventListener("keyup",q);
+
+        
+           
+     </script>
+     
+  
+  </body>
+</html>qw
